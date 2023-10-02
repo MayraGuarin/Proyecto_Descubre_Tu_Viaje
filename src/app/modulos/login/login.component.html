@@ -1,1 +1,210 @@
-<p>login works!</p>
+<!DOCTYPE html>
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!--Biblioteca  bootstrap-->
+        <link rel="stylesheet" href="/src/assets/dist/css/bootstrap.min.css">
+
+
+
+  <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+
+    background-color: #e5e5f7;
+}
+
+.container{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image:  radial-gradient(#a799ca 0.5px, transparent 0.5px), radial-gradient(#a799ca 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    display: flex;
+    min-height: 100vh;
+}
+
+.form-box{
+    width: 370px;
+    height: 455px;
+    position: relative;
+    margin: 6% auto;
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.buttom-box{
+    width: 240px;
+    margin: 30px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #f7f0f0;
+    border-radius: 30px;
+}
+
+.tonggle_btn{
+    padding: 10px 22px;
+    cursor: pointer;
+    background: transparent;
+    border: 0px;
+    outline: none;
+    position: relative;
+}
+
+#elegir{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background: linear-gradient( to right, rgba(63, 81, 181, 0.7), rgba(0, 188, 212, 0.7));
+    border-radius: 30px;
+    transition: 0.8s;
+}
+
+.redes-sociales{
+    margin: 30px auto;
+    text-align: center;
+}
+
+.redes-sociales img{
+    width: 30px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 9px #f7f7f7;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: 0.8s;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid #a799ca;
+    outline: none;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+  .submit-btn {
+    width: 100%; /* Ajusta el ancho según el tamaño deseado */
+    padding: 10px; /* Ajusta el relleno según el tamaño deseado */
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(63, 81, 181, 0.7), rgba(0, 188, 212, 0.7));
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    font-size: 14px; /* Ajusta el tamaño de fuente según el tamaño deseado */
+    margin: 20px auto; /* Auto para centrar vertical y horizontalmente */
+    display: block;
+    text-align: center; /* Para centrar el texto dentro del botón */
+    text-decoration: none;
+  }
+
+
+
+
+.check-box {
+    margin: 30px 30px 10px 0; /* Ajusta los márgenes según tu diseño */
+     /* Cambia la posición a relativa para alinear el texto absoluto */
+  }
+
+  span {
+    color: #757575;
+    font-size: 12px;
+    position: absolute;
+    top: 183px; /* Alinea el texto en la parte superior del checkbox */
+    left: 30px; /* Ajusta la posición horizontal según tu diseño */
+  }
+  .recordar{
+        color: #757575;
+        font-size: 12px;
+        position: absolute;
+        top: 130px; /* Ajusta el valor de top para subir el elemento span */
+        left: 30px; /* Puedes ajustar la posición horizontal según tu diseño */
+
+
+  }
+
+  </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-box">
+            <div class="buttom-box">
+                <div id="elegir" style="left: 120px;"></div>
+                <button type="button" class="tonggle_btn" onclick="Login()">Iniciar Sesión </button>
+                <button type="button" class="tonggle_btn" onclick="Registrar()">Registrar</button>
+            </div>
+
+            <div class="redes-sociales">
+                <img src="/src/assets/img/logo-facebook-png.png" alt="Icono_Facebook">
+                <img src="/src/assets/img/gmail.png" alt="Icono_Gmail">
+            </div>
+
+            <form id="Login" class="input-group" style="left: -400px;">
+                <input type="text" class="input-field" placeholder="E-mail" required="">
+                <input type="password" class="input-field" placeholder="Contraseña" required="">
+                <input type="checkbox" class="check-box"><span class="recordar">Recordar Contraseña.</span>
+                <button type="submit" class="submit-btn">Acceder</button>
+            </form>
+
+            <form id="Registrar" class="input-group" style="left: 50px;">
+                <input type="text" class="input-field" placeholder="Nombre de Usuario" required="">
+                <input type="email" class="input-field" placeholder="Correo" required="">
+                <input type="password" class="input-field" placeholder="Contraseña" required="">
+                <input type="checkbox" class="check-box"><span>Acepto los Términos y Condiciones.</span>
+                <button type="submit" class="submit-btn">Registrar</button>
+
+            </form>
+        </div>
+    </div>
+
+    <footer>2023</footer>
+
+    <script>
+        var x = document.getElementById("Login");
+        var y = document.getElementById("Registrar");
+        var z = document.getElementById("elegir");
+
+        function Login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+
+        function Registrar(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "120px";
+        }
+    </script>
+
+<script src="js/bootstrap.bundle.js"></script>
+
+</body>
+</html>
+

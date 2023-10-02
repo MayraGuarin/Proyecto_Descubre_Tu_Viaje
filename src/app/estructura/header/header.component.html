@@ -1,47 +1,101 @@
-<header >
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #bff3e0">
-      <div class="container-fluid">
-          <img src="./assets/img/logo sin letra.PNG" width="50px" height="50px" style="border-radius: 50%;">
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-        <h1>Descubre tu viaje</h1>
+  <div class="container-fluid">
+      <img src="./assets/img/logo sin letra.PNG" alt="" width="50px" style="border-radius: 50px;">
+      <a href="#" class="navbar-brand text-info fw-semibold fs-4 m-2">Descubre tu viaje</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <button class="navbar-toggler" type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#menuLateral">
+      <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <li class="nav-item">
-              <a class="nav-link text-black"href="#">Contactanos</a>
-            </li>
+  <!--Empieza el menu lateral-->
+      <section class="offcanvas offcanvas-start  sidebar-nav bg-dark" id="menuLateral" tabindex="-1" >
 
-            <li class="nav-item">
-              <a class="nav-link text-black" href="#">Sobre Nosotros</a>
-            </li>
+          <div class="offcanvas-header"
+              data-bs-theme="dark">
+              <h5 class="offcanvas-title text-info">DESCUBRE TU VIAJE</h5>
+              <button class="btn-close"
+              type="button"
+              aria-label="Close"
+              data-bs-dismiss="offcanvas">
+              </button>
+          </div>
 
+          <div class="offcanvas-body d-flex flex-column justify-content-between px-0">
+              <div class="navBar">
 
+              <ul class="navbar-nav  fs-5 justify-content-evenly ">
 
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-            <button class="btn btn-outline-success me-4" type="submit">Buscar</button>
-          </form>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person-circle"></i>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
-              <li><a class="dropdown-item" href="#">Configuración</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
-            </ul>
-          </li>
-          <button type="button" class="btn btn-success me-2">Iniciar Sesión</button>
+                  <li class="nav-item p-3 py-md-1 my-0 py-1"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+
+                  <li class="nav-item p-3 py-md-1 my-0 py-1"><a href="#" class="nav-link">Contáctanos</a></li>
+
+                  <li class="nav-item p-3 py-md-1 my-0 py-1"><a href="#" class="nav-link">Nosotros</a></li>
 
 
-        </ul>
-        </div>
-      </div>
-    </nav>
+                  <button class="boton-inicio "><a class="login-registro" href="./app/modulos/login/login.component.html">Iniciar Sesión</a>
+                  </button>
+
+
+              </ul>
+          </div>
+              <div class="d-lg-none">
+                  <ul class="navbar-nav  fs-5 justify-content-evenly bg-dark">
+
+                      <li class="nav-item p-3 py-md-1 text-primary dropdown my-0 py-1">
+                          <a href="#" class="nav-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-buildings-fill text-success"></i>
+                            Sitios turísticos<i class="bi bi-chevron-down"></i>
+                        </a>
+                          <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item text-white" href="#">
+                              <i class="bi bi-house-door-fill"></i>
+                              Medellín
+                            </a>
+
+                            <a class="dropdown-item text-white " href="#">
+                              <i class="bi bi-house-door-fill "></i>
+                              Bogotá
+                          </a>
+                          </div>
+                      </li>
+
+                        <li class="nav-item p-3 py-md-1 text-primary dropdown my-0 py-1">
+                          <a href="#" class="nav-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-bar-chart-line-fill text-success"></i>
+                            Reportes<i class="bi bi-chevron-down"></i>
+                        </a>
+                          <div class="dropdown-menu  bg-dark" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item text-white" href="#"><i class="bi bi-star-fill"></i>Favoritos</a>
+                            <a class="dropdown-item text-white" href="#"><i class="bi bi-chat-right-dots-fill"></i>Más comentados</a>
+                          </div>
+                        </li>
+                        <li class="nav-item p-3 py-md-1 text-primary dropdown my-0 py-1">
+                          <a href="#" class="nav-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-gear-fill text-success"></i>
+                            Configuración<i class="bi bi-chevron-down"></i>
+                        </a>
+                          <div class="dropdown-menu  bg-dark" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item text-white" href="#"><i class="bi bi-emoji-grin-fill"></i>Perfil</a>
+                            <a class="dropdown-item text-white" href="#"><i class="bi bi-box-arrow-in-right"></i>Cerrar Sesión</a>
+                          </div>
+                        </li>
+                  </ul>
+              </div>
+
+              <div class="d-lg-none align-self-center py-3">
+
+
+                  <a href="#"><i class="bi bi-whatsapp px-3 text-success fs-4"></i></a>
+                  <a href="#"><i class="bi bi-facebook px-3 text-primary fs-4"></i></a>
+                  <a href="#"><i class="bi bi-instagram px-3 text-danger fs-4"></i></a>
+                </div>
+
+          </div>
+      </section>
+  </div>
+
+  </nav>
 </header>
+
 

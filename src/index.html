@@ -2,133 +2,404 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Proyecto</title>
+  <title>Descubre tu viaje</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-/>
 
-  <!--Codigo plantilla Bootstrap-->
+             <!-- Archivos de bootstrap -->
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+
+                  <!-- Archivos de bootstrap -->
 <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+  <!--finaliza Codigo plantilla Bootstrap-->
+   <link href="./assets/dashboard.css" rel="stylesheet">
 
-      @media (min-width: 768px) {
-        #sidebar-wrapper{
-          margin-left: 0;
-        }
-        #page-content-wrapper{
-          min-width: 0;
-          width: 100%;
-        }
-        #wrapper.toogled #sidebar-wrapper{
-          margin-left: -15rem;
-        }
-      }
+<style>
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100; /* Valor alto para que el encabezado esté en la parte superior */
+    height: 20px; /* Ajusta la altura según tus necesidades */
+    line-height: 20px;
+  }
 
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+.navbar-toggle{
+    border: none;
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
+}.navbar-togggle:focus{
+    outline: none;
+    box-shadow: none;
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-      .list-group-item{
-        border: none;
-        background-color: #bff3e0;
-
-      }
-    body{
-      background: rgb(245, 242, 242);
-    }
-    header {
-  margin-bottom: 0px;
 }
-    </style>
 
 
-    <!-- Custom styles for this template -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="./assets/dashboard.css" rel="stylesheet">
+/*boton iniciar sesión*/
+.boton-inicio{
+  font-family: monospace;
+  font-size: 15px;
+  color: #FAFAFA;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 2px solid #FAFAFA;
+  background: #252525;
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+  margin: 5px 0;
+}
+.boton-inicio:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+  }
+  .nav-item.dropdown {
+    margin-top: 1px; /* Ajusta el valor según el espacio deseado */
+  }
+
+ /* * {
+	box-sizing: border-box;
+}*/
+
+body {
+	background: #fdfdfd;
+	color: #181717;
+	font-family: 'Montserrat', sans-serif;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.contenedor {
+	max-width: 1200px;
+	width: 90%;
+	margin: auto;
+}
+
+/* --- --- CONTENEDOR PRINCIPAL --- --- */
+
+.contenido-principal {
+	margin-bottom: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.contenido-principal__imagen {
+	vertical-align: top;
+	margin-right: 20px;
+	width: 50%;
+	max-width: 550px;
+}
+
+.contenido-principal__contenedor {
+	width: 50%;
+}
+
+.contenido-principal__titulo {
+	font-weight: normal;
+	font-size: 28px;
+}
+
+.contenido-principal__resumen {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 30px;
+	color: #131212;
+  margin-top: 5px;
+}
+
+/* --- --- CAROUSEL --- --- */
+.carousel__contenedor {
+	position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: #181717;
+	opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior {
+	left: -30px;
+}
+
+.carousel__siguiente {
+	right: -30px;
+}
+
+.carousel__lista {
+	overflow: hidden;
+}
+
+.carousel__elemento {
+	text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: #353131;
+	opacity: .2;
+	border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
+@media screen and (max-width: 760px) {
+	body {
+		padding: 10px;
+	}
+
+	.contenido-principal {
+		flex-direction: column;
+
+	}
+
+	.contenido-principal > * {
+		width: 100%;
+	}
+}
+.carousel__elemento img{
+	width: 300px;
+	height: 250px;
+}
+
+/*finaliza carrusel*/
+
+
+/*EFECTO HOVER EN LAS LISTAS*/
+
+.nav-link {
+	color:white;
+	background-image: linear-gradient(90deg, #62aeff, #ff0468, #af4ffe);
+	font-weight: bold;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-size: 0% 2px;
+	background-position: left bottom;
+	transition: background-size 700ms ease-in-out;
+}
+.nav-link:hover{
+	background-size: 100% 2px;
+	color: wheat;
+}
+/*EFECTO HOVER EN LAS LISTAS*/
+
+.dropdown-item .bi {
+	margin-right: 0.5rem; /* Ajusta el valor según la cantidad de espacio que desees */
+}
+@media (max-width: 700px) { /* Aplicar solo en dispositivos más pequeños */
+  #menuLateral {
+    width: 270px /* Ajusta el valor según el ancho deseado */
+  }
+}
+.login-registro{
+  text-decoration: none;
+  color: white;
+}
+.main{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+.main-top{
+  display: flex;
+  width: 100%;
+}
+.main-top i{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+
+}
+.main-skill{
+display: flex;
+  margin-top: 20px;
+}
+.main-skill .card {
+	width: 18rem;
+	margin: 10px;
+	background: #ffff;
+	text-align: center;
+	border-radius: 20px;
+	padding: 10px;
+	box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.1);
+	/* Elimina la propiedad float: left; */
+  }
+
+  /* Media query para tamaños de pantalla pequeños */
+  @media screen and (max-width: 768px) {
+	.main-skill .card {
+	  width: 100%; /* Cambia el ancho al 100% para que las tarjetas ocupen todo el ancho */
+	  float: none; /* Elimina la propiedad float */
+	}
+  }
+.row  .card h3 {
+  margin: 10px;
+  text-transform: capitalize;
+}
+.row  .card p{
+  font-size: 12px;
+
+}
+.row .card button  {
+  background-color:rgba(21, 148, 142, 0.856);
+  color: wheat;
+  padding: 7px 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.row  .card button:hover{
+  background-color: rgba(79, 93, 95, 0.856);
+}
+.main-skill .card i{
+  font-size: 22px;
+  padding: 10px;
+
+}
+a{
+  text-decoration: none;
+  color: #353131;
+}
+
+
+.border{
+  border-radius: 10px;
+
+}
+.border .p-2 {
+  background-color:rgba(21, 148, 142, 0.856) ;
+  cursor: pointer;
+
+
+}
+.img-fluid {
+  border-radius: 10px;
+}
+.img-fluid{
+  width: 370px;
+  height: 230px;
+  padding: 10px;
+  border-radius: 15px;
+
+}
+.card{
+  border: 2px solid rgba(21, 148, 142, 0.856);
+  width: 100%;
+  max-width: 300px; /* Ancho máximo deseado para las tarjetas */
+  margin: 0 auto;
+
+
+}
+i{
+	color: rgba(21, 148, 142, 0.856);
+}
+.badge{
+	background-color: rgba(21, 148, 142, 0.856);;
+}
+
+
+
+
+</style>
+
+
+
 
 </head>
 <body>
   <app-root></app-root>
 
+
 </body>
-    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
 
-    <script src="./assets/dashboard.js"></script>
+<!--JAVASCRIPT-->
 
-    <script src="https://kit.fontawesome.com/ea0a2a567d.js" crossorigin="anonymous"></script>
+<script src="./assets/dashboard.js"></script>
+<script src="./assets/dist/js/"></script>
+<script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!--Start of Tawk.to Script-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+
+<script>
+    window.addEventListener('load', function(){
+	new Glider(document.querySelector('.carousel__lista'), {
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: '.carousel__indicadores',
+		arrows: {
+			prev: '.carousel__anterior',
+			next: '.carousel__siguiente'
+		},
+		responsive: [
+			{
+			  // screens greater than >= 775px
+			  breakpoint: 450,
+			  settings: {
+				// Set to `auto` and provide item width to adjust to viewport
+				slidesToShow: 2,
+				slidesToScroll: 2
+			  }
+			},{
+			  // screens greater than >= 1024px
+			  breakpoint: 800,
+			  settings: {
+				slidesToShow: 4,
+				slidesToScroll: 4
+			  }
+			}
+		]
+	});
+});
+</script>
+
+
+
+
+
+
+    <!--Start of Tawk.to Script
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
@@ -139,7 +410,41 @@ s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
+</script>-->
+
+<!--SCRIPT DEL CARRUSEL verificar con el profesor ya que el scroll funciona en una pagina nomral mas no aca para ver donde se ingresa el script-->
+<script>
+  const carrusel = document.querySelector('.carrusel-items');
+let maxScrollLef = carrusel.scrollWidth - carrusel.clientHeight;
+let intervalo = null;
+let step = 1;
+
+const start = () => {
+  intervalo = setInterval(function () {
+    carrusel.scrollLeft = carrusel.scrollLeft + step;
+    if(carrusel.scrollLeft === maxScrollLef){
+      step = step * -1;
+    }else if(carrusel.scrollLeft === 0){
+      step = step *-1;
+    }
+  }, 10);
+};
+
+const stop = () => {
+  clearInterval(intervalo);
+};
+
+carrusel.addEventListener('mouseover', () =>{
+  stop();
+});
+
+carrusel.addEventListener('mouseout', () =>{
+  start();
+});
+
+start();
 </script>
+
 <!--End of Tawk.to Script-->
 
 </html>
