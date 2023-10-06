@@ -1,14 +1,17 @@
-<div class="contenedor">
-  <main class="contenido-principal">
-      <div class="contenedor">
-        <div class="container-fluid ">
-          <h1 class="contenido-principal__titulo fw-bold">Bienvenido</h1>
-          <p class="contenido-principal__resumen fw-bold text-primary">
-            ¡Estas son nuestras actualizaciones!
-          </p>
-        </div>
-      </div>
-    </main>
+
+  <div class="contenedor">
+    <div class="container-fluid">
+      <h1 class="contenido-principal__titulo fw-bold">Bienvenido</h1>
+      <span class="contenido-principal__resumen fw-bold text-primary">
+        ¡Estas son nuestras actualizaciones!
+      </span>
+      <button class="btn btn-primary float-end fw-bold"><a [routerLink]="['/suscripcion']">Suscribete</a> </button>
+    </div>
+
+
+
+
+
 
 
   <div class="carousel">
@@ -65,9 +68,9 @@
             <div class="card h-100 mx-auto"> <!-- Agregamos la clase mx-auto aquí -->
                 <div class="card-body text-center">
                     <i class="fa fa-star fs-3" aria-hidden="true" style="color: rgba(21, 148, 142, 0.856)"></i>
-                    <h4 class="card-title fw-bold ">Favoritos</h4>
+                    <h4 class="card-title fw-bold "> Favoritos</h4>
                     <p class="card-text">En esta sección podrás ver los lugares con más likes</p>
-                    <button><a href="#" class="card-link text-white">Ver</a></button>
+                    <button><a [routerLink]="['/favoritos']"  class="card-link text-white">Ver</a></button>
                 </div>
             </div>
         </div>
@@ -77,7 +80,7 @@
                     <i class="fa fa-commenting fs-3" aria-hidden="true" style="color: rgba(21, 148, 142, 0.856)"></i>
                     <h4 class="card-title fw-bold">Comentados</h4>
                     <p class="card-text">En esta sección podrás ver los lugares con más comentados</p>
-                    <button><a href="#" class="card-link text-white">Ver</a></button>
+                    <button><a [routerLink]="['/comentados']"  class="card-link text-white">Ver</a></button>
                 </div>
             </div>
         </div>
@@ -87,7 +90,7 @@
                     <i class="fa fa-users fs-3" aria-hidden="true" style="color: rgba(21, 148, 142, 0.856)"></i>
                     <h4 class="card-title fw-bold">Vistos</h4>
                     <p class="card-text">En esta sección podrás ver los lugares más vistos</p>
-                    <button><a href="#" class="card-link text-white">Ver</a></button>
+                    <button><a [routerLink]="['/vistos']" class="card-link text-white">Ver</a></button>
                 </div>
             </div>
         </div>
@@ -97,7 +100,7 @@
                     <i class="fa fa-cloud fs-3" aria-hidden="true" style="color: rgba(21, 148, 142, 0.856)"></i>
                     <h4 class="card-title fw-bold">Guardados</h4>
                     <p class="card-text">En esta sección podrás ver tus sitios guardados por ti</p>
-                    <button><a href="#" class="card-link text-white">Ver</a></button>
+                    <button><a [routerLink]="['/guardados']" class="card-link text-white">Ver</a></button>
                 </div>
             </div>
         </div>
@@ -118,7 +121,7 @@
             <div class="border p-3 ">
                 <!-- Cuadrito para el tema central -->
                 <div class="border p-2 text-center fw-bold" >
-                   <h5><a href="#" class="text-decoration-none fw-bold">Sitios Turísticos</a></h5>
+                   <h5><a [routerLink]="['/contenidos']" class="text-decoration-none fw-bold">Sitios Turísticos</a></h5>
                 </div>
                 <!-- Contenido del primer recuadro -->
                 <div class="d-flex flex-wrap justify-content-between mt-4">
@@ -153,7 +156,7 @@
             <div class="border p-3">
                 <!-- Cuadrito para el tema central -->
                 <div class="border p-2 text-center fw-bold">
-                    Subidos recientemente
+                    <a [routerLink]="['/recientes']">Subidos recientemente</a>
                 </div>
                 <!-- Contenido del segundo recuadro -->
                 <div class="card w-100 mt-4">
