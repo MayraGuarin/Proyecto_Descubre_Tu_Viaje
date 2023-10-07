@@ -12,20 +12,23 @@ export class UsuariosComponent  implements OnInit{
 
   verf=false;
   usuario: any;
+  iduser:any;
   user ={
-    usuario: "",
+    nombre: "",
+    usuario:"",
     clave: "",
-    correo:"",
     celular:"",
     tipo_usuario:"",
   };
 
   //para validar
+  validnombre =true;
   validusuario =true;
   validclave =true;
-  validcorreo =true;
   validcelular =true;
   validtipo_usuario =true;
+  beditar = false;
+
 
 
 
@@ -39,6 +42,10 @@ export class UsuariosComponent  implements OnInit{
       switch(dato) {
         case 0:
           this.verf = false;
+          this.beditar = false;
+          this.iduser ="";
+          this.limpiar();
+
         break;
         case 1:
           this.verf =true;
@@ -49,44 +56,42 @@ export class UsuariosComponent  implements OnInit{
   }
   //LIMPIAR
   limpiar(){
+    this.user.nombre = "";
     this.user.usuario = "";
     this.user.clave = "";
-    this.user.correo = "";
     this.user.celular = "";
     this.user.tipo_usuario = "";
   }
 //validar
-validar(){
+  validar(){
+  if(this.user.nombre== ""){
+      this.validnombre = false;
+    }else{
+    this.validnombre =true;
+  }
   if(this.user.usuario== ""){
-      this.validusuario = false;
+    this.validusuario = false;
     }else{
     this.validusuario =true;
   }
-
   if(this.user.clave== ""){
     this.validclave = false;
     }else{
     this.validclave =true;
   }
 
-if(this.user.correo== ""){
-    this.validcorreo = false;
-    }else{
-    this.validcorreo =true;
-  }
-
-if(this.user.celular== ""){
+  if(this.user.celular== ""){
     this.validcelular = false;
     }else{
     this.validcelular =true;
   }
 
-if(this.user.tipo_usuario== ""){
+  if(this.user.tipo_usuario== ""){
     this.validtipo_usuario = false;
     }else{
     this.validtipo_usuario =true;
   }
-}
+  }
 
   consulta(){
     this.suser.consultar().subscribe((result:any)=>{
@@ -98,7 +103,7 @@ if(this.user.tipo_usuario== ""){
   ingresar(){
    // console.log(this.usuario);
    this.validar();
-   if(this.validusuario==true && this.validclave==true && this.validcorreo==true &&  this.validcelular==true && this.validtipo_usuario==true){
+   if(this.validnombre==true && this.validusuario==true &&  this.validclave==true &&   this.validcelular==true && this.validtipo_usuario==true){
 
 
     this.suser.insertar(this.user).subscribe((datos:any)=>{
@@ -141,5 +146,38 @@ if(this.user.tipo_usuario== ""){
         }
     })
   }
+
+  cargardatos(datos:any, id:number){
+    //console.log(datos);
+    this.user.nombre = datos.nombre;
+    this.user.usuario = datos.usuario;
+    this.user.clave = datos.clave;
+    this.user.celular = datos.celular;
+    this.user.tipo_usuario = datos.tipo_usuario;
+    this.iduser = id;
+    this.mostrar(1);
+    this.beditar =true;
+
+
+  }
+
+  editar(){
+    this.validar();
+   if(this.validnombre==true &&this.validusuario==true && this.validclave==true &&   this.validcelular==true && this.validtipo_usuario==true){
+
+
+    this.suser.edit(this.user, this.iduser).subscribe((datos:any)=>{
+      if (datos['resultado']=='OK') {
+       // alert(datos['mensaje']);
+        this.consulta();
+      }
+    });
+    this.mostrar(0);
+
+    }
+
+  }
+
+
 }
 

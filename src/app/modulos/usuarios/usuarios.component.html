@@ -10,13 +10,13 @@
 <div  id="formulario" *ngIf="verf==true">
     <div class="row">
         <div class="col-lg-6 mt-4">
-            <input type="text" id="nombre" class="form-control fs-6" placeholder="Digite su nombre" [(ngModel)]="user.usuario"><br>
-            <span style="color: red;" *ngIf="validusuario==false">Insertar nombre</span>
+            <input type="text" id="nombre" class="form-control fs-6" placeholder="Digite su nombre" [(ngModel)]="user.nombre"><br>
+            <span style="color: red;" *ngIf="validnombre==false">Insertar nombre</span>
         </div>
 
         <div class="col-lg-6 mt-4">
-            <input type="email" id="email" class="form-control" placeholder="Ingrese Email" [(ngModel)]="user.correo"><br>
-            <span style="color: red;" *ngIf="validcorreo==false">Insertar correo</span>
+            <input type="email" id="usuario" class="form-control" placeholder="Ingrese Email" [(ngModel)]="user.usuario"><br>
+            <span style="color: red;" *ngIf="validusuario==false">Insertar correo</span>
         </div>
     </div>
 
@@ -34,6 +34,7 @@
       <div class="col-lg-4 mt-4 ">
         <select  id="tipo" class="form-control form-select" [(ngModel)]="user.tipo_usuario">
           <option value="Administrador" label="Administrador">Administrador</option>
+
           <option value="General" label="General">General</option>
         </select><br>
         <span style="color: red;" *ngIf="validtipo_usuario==false">Insertar Tipo de usuario</span>
@@ -42,7 +43,8 @@
 
     <div class="row ">
       <div class="col-lg-3 mt-4">
-          <button class="btn btn-primary" (click)="ingresar()" style="background-color: rgba(21, 148, 142, 0.856)">Guardar</button>
+          <button *ngIf="beditar==false" class="btn btn-primary" (click)="ingresar()" style="background-color: rgba(21, 148, 142, 0.856)">Guardar</button>
+          <button *ngIf="beditar==true" class="btn btn-primary" (click)="editar()">Editar</button>
       </div>
       <div class="col-lg-3 mt-4">
           <button class="btn btn-secondary"  (click)="mostrar(0)">Cancelar</button>
@@ -62,8 +64,8 @@
     <thead>
       <tr>
 
+        <th >Nombre</th>
         <th >Usuario</th>
-        <th >Correo</th>
         <th >Celular</th>
         <th> Tipo</th>
         <th >Acciones</th>
@@ -73,13 +75,13 @@
 
     <tbody>
       <tr *ngFor="let item of usuario">
+        <td>{{item.nombre}}</td>
         <td>{{item.usuario}}</td>
-        <td>{{item.correo}}</td>
         <td>{{item.celular}}</td>
         <td>{{item.tipo_usuario}}</td>
         <td>
 
-          <a >
+          <a (click)="cargardatos(item, item.id_usuario)">
             <span class="fas fa-edit editar" litle="Editar" ></span>
           </a>
 

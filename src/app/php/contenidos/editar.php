@@ -4,6 +4,7 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 
 $json= file_get_contents('php://input');
 
+
 $params= json_decode($json);
 
 require("../conexion.php");
