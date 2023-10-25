@@ -8,9 +8,9 @@ $params = json_decode($json);
 
 require("../conexion.php");
 
-//$ins = "insert into soporte(nombre, correo, fo_cliente ) values('Prueba', 'prueba@gmail.com', '3')";
+//$ins = "INSERT INTO soporte (Nombre, Correo, inquietudes ) values('Prueba', 'prueba@gmail.com', '123456')";
 
-$ins = "insert into soporte(nombre, correo, fo_cliente) values('$params->nombre', '$params->correo', '$params->fo_cliente')";
+$ins = "insert into soporte(Nombre, Correo, inquietudes) values ('$params->Nombre', '$params->Correo', '$params->inquietudes')";
 
 mysqli_query($conexion, $ins) or die ('no inserto');
 

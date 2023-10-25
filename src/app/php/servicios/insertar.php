@@ -10,7 +10,8 @@ require("../conexion.php");
 
 //$ins = "insert into servicios (nombre, codigo) values('prueba', 'MED0045')";
 
-$ins = "insert into servicios(nombre) values('$params->nombre')";
+$ins = "INSERT INTO servicios (nombre, codigo, fo_depto, fo_ciudad) VALUES ('$params->nombre', '$params->codigo', $params->fo_depto, $params->fo_ciudad)";
+
 mysqli_query($conexion, $ins) or die ('no inserto');
 
 class Result {}

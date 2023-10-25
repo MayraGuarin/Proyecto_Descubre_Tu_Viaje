@@ -1,18 +1,25 @@
 <div id="fondo">
-  <div class="contenido-izquierdo">
-      <img src="./assets/img/logo sin letra.PNG" alt="Imagen">
-      <h1>Descubre tu viaje</h1>
-  </div>
-  <div id="form">
-
-      <img src="./assets/img/logo-facebook-png.png" alt="" width="35px">
-      <input type="email" class="form-control" placeholder="Ingrese su correo" [(ngModel)]="email">
-
-      <input type="password" class="form-control" placeholder="Ingrese su contraseña" [(ngModel)]="clave">
-
+  <div class="contenido">
+    <div class="contenido-izquierdo">
+      <img class="logo-dv" src="./assets/img/logo sin letra.PNG" alt="Imagen">
+      <h1 class="fw-bold" style="color: rgb(17, 44, 49);">Descubre tu viaje</h1>
+      <p> "Pequeños lugares, grandes momentos"</p>
+    </div>
+    <div class="formulario">
+      <div class="image-container">
+        <img src="./assets/img/gmail.png" alt="" width="45px">
+        <img src="./assets/img/logo-facebook-png.png" alt=" " width="45px">
+      </div>
+      <input type="email" class="form-control mt-4" placeholder="Ingrese su correo" [(ngModel)]="email">
+      <input type="password" class="form-control mt-4" placeholder="Ingrese su contraseña" [(ngModel)]="clave">
       <span *ngIf="error==true" style="color: red;">Email o contraseña incorrecta</span><br>
-
-      <input type="button" value="Ingresar" class="btn btn-primary" (click)="consulta()">
+      <input type="button" value="Ingresar" class="btn btn-primary mt-4" (click)="consulta()">
+    </div>
   </div>
 </div>
+
+
+
+
+
 

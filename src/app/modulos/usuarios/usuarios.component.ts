@@ -154,14 +154,14 @@ export class UsuariosComponent  implements OnInit{
     this.user.clave = datos.clave;
     this.user.celular = datos.celular;
     this.user.tipo_usuario = datos.tipo_usuario;
-    this.iduser = id;
+   // this.iduser = id;
     this.mostrar(1);
-    this.beditar =true;
+    //this.beditar =true;
 
 
   }
 
-  editar(){
+ editar(){
     this.validar();
    if(this.validnombre==true &&this.validusuario==true && this.validclave==true &&   this.validcelular==true && this.validtipo_usuario==true){
 

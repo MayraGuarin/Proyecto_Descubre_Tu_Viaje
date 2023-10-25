@@ -1,0 +1,71 @@
+<h1 class="text-center">MUSEO DE ANTIOQUIA</h1>
+<hr>
+
+<div class="row">
+
+  <p class="info-general"> El Museo de Antioquia, antiguo Palacio Municipal, es un museo situado en el centro de Medellín que alberga colecciones con relevancia internacional. Fue el primero fundado en el departamento de Antioquia y el segundo en Colombia. Se sitúa frente a la plaza Botero, cerca de la estación de metro Parque Berrío.</p>
+  <p>Se encuentra en un lugar muy colonial y centrado, cerca a diferentes rutas como buses públicos y el Metro de Medellín; ademas esta situado en un lugar muy transitado, cerca a hoteles, restaurantes y centros comenriales para realizar cualquier tipo de compras.</p>
+</div>
+
+<div class="opciones text-center">
+  <label>
+    <input type="radio" name="opcion" (change)="seleccionarOpcion('opcion1')" [checked]="opcionSeleccionada === 'opcion1'"> Ver Mapa
+  </label>
+  <label>
+    <input type="radio" name="opcion" (change)="seleccionarOpcion('opcion2')" [checked]="opcionSeleccionada === 'opcion2'"> Restaurantes cercanos
+  </label>
+  <label>
+    <input type="radio" name="opcion" (change)="seleccionarOpcion('opcion3')" [checked]="opcionSeleccionada === 'opcion3'"> Rutas para llegar
+  </label>
+  <label>
+    <input type="radio" name="opcion" (change)="seleccionarOpcion('opcion4')" [checked]="opcionSeleccionada === 'opcion4'"> Imagenes
+  </label>
+</div>
+
+<div *ngIf="opcionSeleccionada === 'opcion1'" class="info">
+  <!-- Contenido para agregar la ruta del Mapa-->
+  <div class="mapa">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0857792751117!2d-75.57170602593828!3d6.252428026255963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428feb81e9f5d%3A0x213a72a1fad66b8b!2sMuseo%20de%20Antioquia!5e0!3m2!1ses-419!2sco!4v1698185366617!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+<div *ngIf="opcionSeleccionada === 'opcion2'" class="info">
+  <!-- Contenido para la Opción 2 -->
+  <p>Información de la Opción 2.</p>
+</div>
+
+<div *ngIf="opcionSeleccionada === 'opcion3'" class="info">
+  <!-- Contenido para la Opción 3 -->
+  <p>Información de la Opción 3.</p>
+</div>
+
+<div *ngIf="opcionSeleccionada === 'opcion4'" class="info">
+  <!-- Contenido para galeria de imagenes-->
+<div class="photo-gallery">
+    <div class="img">
+      <img src="./assets/img/MuseoAntioquia.jpg" alt="">
+    </div>
+    <div class="img">
+      <img src="./assets/img/museoAntioquia2.jpg" alt="">
+    </div>
+    <div class="img">
+      <img src="./assets/img/museoAntioquia3.jpg" alt="">
+    </div>
+    <div class="img">
+      <img src="./assets/img/museoAntioquia4.jpg" alt="">
+    </div>
+    <div class="img">
+      <img src="./assets/img/museoAntioquia5.jpg" alt="">
+    </div>
+    <div class="img">
+      <img src="./assets/img/museoAntioquia6.jpg" alt="">
+    </div>
+    <div class="img">
+      <img src="../assets/img/museoAntioquia7.jpg" alt="">
+    </div>
+    <div class="img">
+      <img src="./assets/img/museoAntioquia9.jpg" alt="">
+    </div>
+
+</div>
+</div>

@@ -1,0 +1,18 @@
+* {
+  margin-left: 40px;
+}
+
+.editar {
+  color: blueviolet;
+  cursor: pointer;
+}
+
+.eliminar {
+  color: red;
+  cursor: pointer;
+}
+
+.ver {
+  color: green;
+  cursor: pointer;
+}/*# sourceMappingURL=servicios.component.css.map */

@@ -1,7 +1,30 @@
 
 
 
+<!-- app.component.html -->
 
+<div class="container">
+
+  <div class="sidebar">
+    <div class="image-text-container">
+      <div class="image">
+        <img src="./assets/img/logo sin letra.PNG" alt="logo-descubre-tu-viaje">
+      </div>
+
+      <div class="text header-text">
+        <span class="name fw-bold">Descubre tu viaje</span>
+      </div>
+    </div>
+    <ul>
+      <li><a  href="#"><i class="fas fa-columns px-2"></i>Dashboard</a></li>
+      <li><a [routerLink]="['/servicios']"><i class="fas fa-tasks px-2"></i> Servicios</a></li>
+      <li><a [routerLink]="['/contenido']"><i class="fab fa-elementor px-2"></i> Contenido</a></li>
+      <li><a [routerLink]="['/usuarios']"><i class="fas fa-database px-2"></i> Usuarios</a></li>
+    </ul>
+
+
+  </div>
+</div>
 
 
 

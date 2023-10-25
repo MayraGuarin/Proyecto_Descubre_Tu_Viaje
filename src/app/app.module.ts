@@ -11,6 +11,12 @@ import { PrincipalComponent } from './modulos/principal.component';
 import { DashboardComponent } from './modulos/dashboard/dashboard.component';
 import { LoginComponent } from './modulos/login/login.component';
 import { UsuariosComponent } from './modulos/usuarios/usuarios.component';
+import { SuscripcionComponent } from './modulos/suscripcion/suscripcion.component';
+import { ServiciosComponent } from './modulos/servicios/servicios.component';
+import { ContenidoComponent } from './modulos/contenido/contenido.component';
+import { SoporteComponent } from './modulos/soporte/soporte.component';
+import { Contenido2Component } from './modulos/contenido2/contenido2.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +27,13 @@ import { UsuariosComponent } from './modulos/usuarios/usuarios.component';
     PrincipalComponent,
     DashboardComponent,
     LoginComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    SuscripcionComponent,
+    ServiciosComponent,
+    ContenidoComponent,
+    SoporteComponent,
+    Contenido2Component,
+
   ],
   imports: [
     BrowserModule,

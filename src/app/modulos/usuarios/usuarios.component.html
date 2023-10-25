@@ -7,7 +7,7 @@
 </button>
 
 
-<div  id="formulario" *ngIf="verf==true">
+<div class="formulario" id="formulario" *ngIf="verf==true">
     <div class="row">
         <div class="col-lg-6 mt-4">
             <input type="text" id="nombre" class="form-control fs-6" placeholder="Digite su nombre" [(ngModel)]="user.nombre"><br>
@@ -60,19 +60,16 @@
 <br>
 
 <div class="table-responsive">
-  <table class="table caption-top" style="border: 1px solid black;">
+  <table class="table caption-top table-striped">
     <thead>
       <tr>
-
-        <th >Nombre</th>
-        <th >Usuario</th>
-        <th >Celular</th>
-        <th> Tipo</th>
-        <th >Acciones</th>
-
+        <th>Nombre</th>
+        <th>Usuario</th>
+        <th>Celular</th>
+        <th>Tipo</th>
+        <th>Acciones</th>
       </tr>
     </thead>
-
     <tbody>
       <tr *ngFor="let item of usuario">
         <td>{{item.nombre}}</td>
@@ -80,19 +77,15 @@
         <td>{{item.celular}}</td>
         <td>{{item.tipo_usuario}}</td>
         <td>
-
           <a (click)="cargardatos(item, item.id_usuario)">
-            <span class="fas fa-edit editar" litle="Editar" ></span>
+            <span class="fas fa-edit editar" title="Editar"></span>
           </a>
-
           -
-          <a (click)="pregunta( item.id_usuario, item.usuario)">
-              <span  class="fas fa-trash-alt eliminar" litle="Eliminar" ></span>
+          <a (click)="pregunta(item.id_usuario, item.nombre)">
+            <span class="fas fa-trash-alt eliminar" title="Eliminar"></span>
           </a>
         </td>
       </tr>
-
-
     </tbody>
   </table>
 </div>

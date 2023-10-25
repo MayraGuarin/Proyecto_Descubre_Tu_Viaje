@@ -1,0 +1,79 @@
+<h1 class="fw-bold">CONTENIDO</h1>
+
+<p class="sitios">En esta Sección podras ver todos los sitios turisticos segun la ciudad</p>
+
+<h6>Seleccione la ciudad</h6>
+<select class="form-select"[(ngModel)]="ciudadSeleccionada"  aria-label="Default select example">
+  <option selected disabled>Seleccione</option>
+  <option value="Bogotá">Bogotá</option>
+  <option value="Medellín">Medellín</option>
+</select>
+
+<div class="container py-5">
+  <h1 class="text-center">{{ ciudadSeleccionada }}</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4 py-5" *ngIf="ciudadSeleccionada==='Medellín'">
+      <div class="col-md-4" >
+          <div class="card">
+              <img src="./assets/img/MuseoAntioquia.jpg" class="card-img-top mx-auto" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">Museo de Antioquia</h5>
+
+              </div>
+              <div class="mb-5 d-flex justify-content-around">
+                  <button class="btn btn-primary"><a class="text-decoration-none" [routerLink]="['/contenido2']"> Ver</a></button>
+              </div>
+          </div>
+        </div>
+          <div class="col">
+          <div class="card">
+            <img src="./assets/img/medellin-gc38991ff0_1280.jpg" class="card-img-top mx-auto" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Parque de Botero</h5>
+
+            </div>
+            <div class="mb-5 d-flex justify-content-around">
+
+                <button class="btn btn-primary">Ver</button>
+            </div>
+        </div>
+      </div>
+
+</div>
+
+<!--BOGOTA-->
+
+<div class="container py-5">
+  <div class="row row-cols-1 row-cols-md-3 g-4 py-5"*ngIf="ciudadSeleccionada==='Bogotá'">
+
+    <div class="col-md-4" >
+        <div class="card ">
+            <img src="./assets/img/plazabolivar.jpg" class="card-img-top mx-auto" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Plaza de Bolivar</h5>
+
+            </div>
+            <div class="mb-5 d-flex justify-content-around">
+
+                <button class="btn btn-primary">Ver</button>
+            </div>
+        </div>
+      </div>
+        <div class="col">
+        <div class="card align-items-stars">
+          <img src="./assets/img/museo el oro.jpg" class="card-img-top mx-auto" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">Museo el Oro</h5>
+
+          </div>
+          <div class="mb-5 d-flex justify-content-around">
+
+              <button class="btn btn-primary">Ver</button>
+          </div>
+      </div>
+    </div>
+
+</div>
+</div>
+
+
+

@@ -1,0 +1,233 @@
+body {
+	background: #fdfdfd;
+	color: #181717;
+	font-family: 'Montserrat', sans-serif;
+	min-height: 100vh;
+	align-items: center;
+
+}
+.contenedor{
+
+  flex: 1;
+  padding: 20px;
+  margin-left: 250px; /* Añadido margen izquierdo para evitar solapamiento */
+
+}
+i{
+	color: rgba(21, 148, 142, 0.856);
+}
+.badge{
+	background-color: rgba(21, 148, 142, 0.856);;
+}
+
+.float-end {
+    float: right;
+    margin-top: -20px;
+    background-color: rgba(21, 148, 142, 0.856);
+    border: none;
+    color: #181717;
+  }
+.contenido-principal-main {
+  margin-left: 250px; /* Ajusta este valor según tus necesidades */
+  padding: 20px;
+  width: calc(100% - 250px); /* Resta el ancho del sidebar al 100% */
+  transition: margin-left 0.3s ease-in-out; /* Agrega una transición suave */
+}
+.contenedor {
+	max-width: 1200px;
+	width: 90%;
+	margin: auto;
+}
+/* --- --- CAROUSEL --- --- */
+.carousel__contenedor {
+	position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: #181717;
+	opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior {
+	left: -30px;
+}
+
+.carousel__siguiente {
+	right: -30px;
+}
+
+.carousel__lista {
+	overflow: hidden;
+}
+
+.carousel__elemento {
+	text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: #353131;
+	opacity: .2;
+	border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
+
+
+.carousel__elemento img{
+	width: 300px;
+	height: 250px;
+}
+
+/*finaliza carrusel*/
+
+/* --- --- CONTENEDOR PRINCIPAL --- --- */
+
+.contenido-principal {
+	margin-bottom: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.contenido-principal__imagen {
+	vertical-align: top;
+	margin-right: 20px;
+	width: 50%;
+	max-width: 550px;
+}
+
+.contenido-principal__contenedor {
+	width: 50%;
+}
+
+.contenido-principal__titulo {
+	font-weight: normal;
+	font-size: 28px;
+}
+
+.contenido-principal__resumen {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 30px;
+	color: #131212;
+  margin-top: 5px;
+}
+.main {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  margin-left: auto; /* Mueve el contenido hacia la derecha */
+  margin-right: 0; /* Elimina el margen izquierdo */
+}
+.main-top{
+  display: flex;
+  width: 100%;
+}
+.main-top i{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+
+}
+.main-skill{
+display: flex;
+  margin-top: 20px;
+}
+.main-skill .card {
+	width: 18rem;
+	margin: 10px;
+	background: #ffff;
+	text-align: center;
+	border-radius: 20px;
+	padding: 10px;
+	box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.1);
+	/* Elimina la propiedad float: left; */
+  }
+
+  .border .p-2 {
+    background-color:rgba(21, 148, 142, 0.856) ;
+    cursor: pointer;
+
+
+  }
+  .img-fluid {
+    border-radius: 10px;
+  }
+  .img-fluid{
+    width: 370px;
+    height: 230px;
+    padding: 10px;
+    border-radius: 15px;
+
+  }
+  .card{
+    border: 2px solid rgba(21, 148, 142, 0.856);
+    width: 100%;
+    max-width: 300px; /* Ancho máximo deseado para las tarjetas */
+    margin: 0 auto;
+
+
+  }
+  .row .card button  {
+    background-color:rgba(21, 148, 142, 0.856);
+    color: wheat;
+    padding: 7px 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .row  .card button:hover{
+    background-color: rgba(79, 93, 95, 0.856);
+  }
+  .main-skill .card i{
+    font-size: 22px;
+    padding: 10px;
+
+  }
+
+
+
+  .border{
+    border-radius: 10px;
+
+  }
+  @media screen and (max-width: 768px) {
+    .main-skill .card {
+      width: 100%; /* Cambia el ancho al 100% para que las tarjetas ocupen todo el ancho */
+      float: none; /* Elimina la propiedad float */
+    }
+    }
+  .row  .card h3 {
+    margin: 10px;
+    text-transform: capitalize;
+  }
+  .row  .card p{
+    font-size: 12px;
+
+  }

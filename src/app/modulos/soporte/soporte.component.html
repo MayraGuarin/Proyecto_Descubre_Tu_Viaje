@@ -1,0 +1,102 @@
+<h1 class="fw-bold">CONTACTÁNOS</h1>
+
+<button class="btn btn-primary mt-4" (click)="mostrar(1)">Ingresar inquietud</button>
+
+<div class="container ">
+  <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-md-12">
+
+              <form class="form-horizontal"id="formulario" *ngIf="verf==true" method="post">
+
+
+                      <div class="form-group">
+                        <div class="row">
+                          <span class="col-md-1 text-center">
+                          <i class="fa fa-user bigicon" style="color:rgba(21, 148, 142, 0.856)" ></i>
+                          </span>
+                          <div class="col-md-8">
+                              <input id="nombre" name="name" type="text" placeholder="Ingrese su Nombre" class="form-control" [(ngModel)]="user.Nombre">
+                              <span style="color: red;" *ngIf="validNombre==false">Ingrese los datos</span>
+
+                            </div>
+                          </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <div class="row">
+                          <span class="col-md-1  text-center">
+                            <i class="fas fa-envelope bigicon"style="color:rgba(21, 148, 142, 0.856);"></i></span>
+                          <div class="col-md-8">
+                              <input id="email" name="email" type="text" placeholder="Ingrese su Correo" class="form-control"[(ngModel)]="user.Correo">
+                              <span style="color: red;"  *ngIf="validCorreo==false">Ingrese los datos</span>
+                          </div>
+                      </div>
+                    </div>
+
+
+                      <div class="form-group mt-4">
+                        <div class="row">
+                          <span class="col-md-1  text-center"><i class="fa fa-pencil-square bigicon"style="color:rgba(21, 148, 142, 0.856);"></i></span>
+                          <div class="col-md-8">
+                              <textarea class="form-control" id="message" name="message" [(ngModel)]="user.inquietudes" >
+                                <span class="bg-danger" *ngIf="validinquietudes==false">Ingrese los datos</span>
+
+                              </textarea>
+
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-lg-3 text-center">
+                              <button type="submit" *ngIf="beditar==false" class="btn btn-primary btn-lg"  (click)="ingresar()" style="background-color:rgba(21, 148, 142, 0.856);">Enviar</button>
+
+                              <button type="submit"  class="btn btn-primary btn-lg"  (click)="ingresar()" style="background-color:rgba(21, 148, 142, 0.856);">Enviar</button>
+                          </div>
+
+
+
+
+                        <div class="col-lg-3 text-center" (click)="mostrar(0)">
+                          <button type="submit" class="btn btn-primary btn-lg" style="background-color:rgba(21, 148, 142, 0.856);">Cancelar</button>
+                       </div>
+                      </div>
+
+              </form>
+          </div>
+
+  </div>
+</div>
+
+
+<div class="table-responsive  mt-4">
+  <table class="table caption-top table-striped">
+    <thead>
+      <tr>
+        <th style="width: 20%;">Nombre</th>
+        <th>Correo</th>
+        <th>Inquietudes</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of soporte">
+        <td>{{item.Nombre}}</td>
+        <td>{{item.Correo}}</td>
+        <td>{{item.inquietudes}}</td>
+        <td>
+          <a (click)="cargardatos(item, item.id_soporte)">
+          <span class="fas fa-edit editar" title="editar" ></span>
+          </a>
+
+          <a (click)="pregunta(item.id_soporte, item.Nombre)" >
+            <span class="fas fa-trash eliminar" title="eliminar" ></span>
+          </a>
+        </td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>

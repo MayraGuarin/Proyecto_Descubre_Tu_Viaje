@@ -4,14 +4,14 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class SuscripcionService {
+export class SoporteService {
 
   url= 'http://localhost/proyecto/src/app/php/soporte/';
 
   constructor(private http:HttpClient) { }
 
   consultar() {
-    return this.http.get(`${this.url}consultar.php`);
+    return this.http.get(`${this.url}consulta.php`);
   }
 
   insertar(articulo:any) {
@@ -22,8 +22,8 @@ export class SuscripcionService {
     return this.http.get(`${this.url}eliminar.php?id=${id}`);
   }
 
-  edit(datos:any) {
-    return this.http.post(`${this.url}edit.php`, JSON.stringify(datos));
+  edit(datos:any, id:number) {
+    return this.http.post(`${this.url}editar.php?id=${id}`, JSON.stringify(datos));
   }
 
 }

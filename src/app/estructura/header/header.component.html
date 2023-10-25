@@ -1,28 +1,92 @@
-<header>
+<header style="background-color: white" >
+  <nav class="navbar navbar-expand-lg navbar  container-fluid" style="background-color: white;"  >
+
+      <!-- Botón para mostrar/ocultar el sidebar -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link text-black" href="#">Nosostros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" [routerLink]="['/soporte']">Contáctanos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" (click)="cerrar()" style="cursor: pointer;">Cerrar Sesión</a>
+        </li>
+
+
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<header class="bg-dark text-dark py-2">
+  <div class="container-fluid">
+    <div class="d-flex align-items-center">
+      <img src="./assets/img/logo sin letra.PNG" alt="" width="50px" style="border-radius: 50px;">
+      <h1 class="navbar-brand m-0 ms-2 fw-semibold fs-4">Descubre tu viaje</h1>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column justify-content-between px-0">
+      <div class="navBar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul class="navbar-nav  fs-5 justify-content-center ">
+
+      <li class="nav-item p-3 py-md-1 my-0 py-1"><a [routerLink]="['/dashboard']"class="nav-link">Dashboard</a></li>
+
+      <li class="nav-item p-3 py-md-1 my-0 py-1"><a [routerLink]="['/contactanos']" class="nav-link">Contáctanos</a></li>
+
+      <li class="nav-item p-3 py-md-1 my-0 py-1"><a [routerLink]="['/nosotros']"class="nav-link">Nosotros</a></li>
+
+      <li class="nav-item p-3 py-md-1 my-0 py-1"><a [routerLink]="['/servicios']"class="nav-link">Servicios</a></li>
+
+      <li class="nav-item p-3 py-md-1 my-0 py-1"><a [routerLink]="['/usuarios']"class="nav-link">Usuario</a></li>
+
+      <li class="nav-item p-3 py-md-1 my-0 py-1"><a (click)="cerrar()" style="cursor: pointer;">
+        Cerrar Sesión
+      </a>
+
+      </li>
+
+    </ul>
+      </div>
+  </div>
+  </div>
+</header>
+
+
+
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
   <div class="container-fluid">
       <img src="./assets/img/logo sin letra.PNG" alt="" width="50px" style="border-radius: 50px;">
       <a href="#" class="navbar-brand text-info fw-semibold fs-4 m-2">Descubre tu viaje</a>
 
-      <button class="navbar-toggler" type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#menuLateral">
-      <span class="navbar-toggler-icon"></span>
-      </button>
 
-  <!--Empieza el menu lateral-->
-      <section class="offcanvas offcanvas-start  sidebar-nav bg-dark" id="menuLateral" tabindex="-1" >
 
-          <div class="offcanvas-header"
-              data-bs-theme="dark">
-              <h5 class="offcanvas-title text-info">DESCUBRE TU VIAJE</h5>
-              <button class="btn-close"
-              type="button"
-              aria-label="Close"
-              data-bs-dismiss="offcanvas">
-              </button>
-          </div>
+
 
           <div class="offcanvas-body d-flex flex-column justify-content-between px-0">
               <div class="navBar">
@@ -54,33 +118,9 @@
 
               </ul>
           </div>
-              <div class="d-lg-none">
-                  <ul class="navbar-nav  fs-5 justify-content-evenly bg-dark">
 
-                      <li class="nav-item p-3 py-md-1 text-primary dropdown my-0 py-1">
-                          <a [routerLink]="['/contenido']"
-                               class="nav-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-buildings-fill text-success"></i>
-                               Sitios turísticos<i class="bi bi-chevron-down"></i>
-                        </a>
-                          <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item text-white" [routerLink]="['/ciudad']" >
-                              <i class="bi bi-house-door-fill"></i>
-                              Medellín
-                            </a>
 
-                            <a class="dropdown-item text-white " [routerLink]="['/ciudad']" >
-                              <i class="bi bi-house-door-fill "></i>
-                              Bogotá
-                          </a>
-                          </div>
-                      </li>
-
-                      <li class="nav-item p-3 py-md-1 my-0 py-1"><a [routerLink]="['/reportes']" class="nav-link">Reportes</a></li>
-
-                  </ul>
-              </div>
-
-              <div class="d-lg-none align-self-center py-3">
+             < <div class="d-lg-none align-self-center py-3">
 
 
                   <a href="#"><i class="bi bi-whatsapp px-3 text-success fs-4"></i></a>
@@ -89,10 +129,10 @@
                 </div>
 
           </div>
-      </section>
+
   </div>
 
-  </nav>
-</header>
+  </nav>-->
+
 
 

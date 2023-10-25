@@ -1,0 +1,91 @@
+<h1 class="fw-bold">
+  SERVICIOS
+</h1>
+<button class="btn btn-primary" (click)="mostrar(1)">Insertar Datos</button>
+
+<h6 class="mt-4">Para ingresar sitios turisticos, diligencie el formulario</h6>
+
+
+<div id="formulario" *ngIf="verf==true">
+
+  <div class="row col-lg-4" style="display: inline-block;">
+      <label for="nombre">Ingrese el sitio</label>
+      <input type="text" id="nombre" class="form-control"  [(ngModel)]="servicio.nombre" placeholder="Ingrese los datos"><br>
+      <span style="color: red;" *ngIf="validnombre==false">Datos requeridos</span>
+  </div>
+
+  <div class="row col-lg-4 mt-4" style="display: inline-block;">
+      <label for="codigo" >Ingrese el código</label>
+      <input type="text" id="codigo"  class="form-control" [(ngModel)]="servicio.codigo" placeholder="Ingrese los datos"><br>
+      <span style="color: red;" *ngIf="validcodigo==false">Datos requeridos</span>
+  </div>
+
+
+  <div class="row col-lg-4" style="display: inline-block;">
+      <select  id="fo_depto" class="form-control form-select" [(ngModel)]="servicio.fo_depto">
+        <option value="0" label="Seleccionar Departamento">Seleccionar Departamento</option>
+        <option *ngFor="let item1 of departamento" value="{{item1.id_depto}}" label="{{item1.nombre}}">{{item1.nombre}}</option>
+      </select>
+      <span style="color: red;" *ngIf="validfo_depto==false">Datos requeridos</span>
+
+  </div>
+
+  <div class="row col-lg-4" style="display: inline-block;">
+    <select  id="fo_ciudad" class="form-control form-select" [(ngModel)]="servicio.fo_ciudad">
+      <option value="0" label="Seleccionar Ciudad">Seleccionar Ciudad</option>
+      <option *ngFor="let item2 of ciudad" value="{{item2.id_ciudad}}" label="{{item2.nombre}}">{{item2.nombre}}</option>
+    </select>
+    <span style="color: red;" *ngIf="validfo_ciudad==false">Datos requeridos</span>
+
+
+</div>
+
+
+  <div class="row ">
+    <div class="col-lg-3 mt-4">
+        <button  *ngIf="beditar==false" class="btn btn-primary "(click)="ingresar()" style="background-color: rgba(21, 148, 142, 0.856)">Guardar</button>
+         <button *ngIf="beditar==true" class="btn btn-primary" (click)="editar()">Editar</button>
+
+    </div>
+    <div class="col-lg-3 mt-4">
+        <button class="btn btn-secondary" (click)="mostrar(0)" >Cancelar</button>
+    </div>
+</div>
+
+</div>
+
+
+<div class="table-responsive  mt-4">
+  <table class="table caption-top table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Codigo</th>
+        <th>Departamento</th>
+        <th>Ciudad</th>
+        <th class="text-center">Acción</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of usuario">
+        <td>{{item.nombre}}</td>
+        <td>{{item.codigo}}</td>
+        <td>{{item.ndepartamento}}</td>
+        <td>{{item.nciudad}}</td>
+
+        <td>
+
+          <a (click)="pregunta(item.id_servicio, item.nombre)">
+            <span class="fas fa-trash-alt eliminar" title="Eliminar"></span>
+          </a>
+        </td>
+
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+

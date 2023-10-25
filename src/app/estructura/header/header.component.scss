@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-left: 250px;
+    padding: 20px;
+
+  }
+  .nav-link {
+    color:white;
+    background-image: linear-gradient(90deg, #62aeff, #ff0468, #af4ffe);
+    font-weight: bold;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: left bottom;
+    transition: background-size 700ms ease-in-out;
+  }
+  .nav-link:hover{
+    background-size: 100% 2px;
+    color: wheat;
+  }
+  /*EFECTO HOVER EN LAS LISTAS*/
+
+  .dropdown-item .bi {
+    margin-right: 0.5rem; /* Ajusta el valor según la cantidad de espacio que desees */
+  }

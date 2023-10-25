@@ -1,0 +1,34 @@
+*{
+  margin-left: 40px;
+}
+
+.editar{
+  color: blueviolet;
+  cursor: pointer;
+}
+.eliminar{
+  color: red;
+  cursor: pointer;
+}
+.ver{
+  color:green;
+  cursor: pointer;
+}
+//td a {
+//  margin-left: -20px;
+/*MOFICAR LA TABLA Y SU TAMAÑO */
+.table-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Asegura que las columnas se ajusten al contenido automáticamente */
+.table {
+  width: 95%;
+}
+thead {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Fondo blanco para que el encabezado sea visible */
+  z-index: 1; /* Asegura que el encabezado esté en la parte superior de la tabla */
+}

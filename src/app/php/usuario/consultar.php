@@ -4,7 +4,7 @@
 
   require("../conexion.php");
 
-  $con ="SELECT * from usuario ORDER BY usuario";
+  $con ="SELECT * from usuario ORDER BY nombre";
   $res = mysqli_query($conexion, $con) or die ('no consulto usuarios');
 
   $vec =[];

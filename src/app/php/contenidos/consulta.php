@@ -4,7 +4,9 @@
 
   require("../conexion.php");
 
-  $con ="SELECT * from contenidos ORDER BY titulo";
+  $con ="SELECT c.* ,  s.nombre AS nnombre FROM contenidos c
+         INNER JOIN servicios s ON c.fo_servicios = s.id_servicio
+         ORDER BY c.Informacion";
   $res = mysqli_query($conexion, $con) or die ('no consulto clientes');
 
   $vec =[];

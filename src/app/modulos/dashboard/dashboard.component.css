@@ -1,0 +1,145 @@
+@charset "UTF-8";
+.contenido-principal-main {
+  margin-left: 250px; /* Ajusta este valor según tus necesidades */
+  padding: 20px;
+  width: calc(100% - 250px); /* Resta el ancho del sidebar al 100% */
+  transition: margin-left 0.3s ease-in-out; /* Agrega una transición suave */
+}
+
+.contenedor {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+/* --- --- CAROUSEL --- --- */
+.carousel__contenedor {
+  position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: none;
+  top: calc(50% - 35px);
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  background: none;
+  color: #181717;
+  opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+  opacity: 100%;
+}
+
+.carousel__anterior {
+  left: -30px;
+}
+
+.carousel__siguiente {
+  right: -30px;
+}
+
+.carousel__lista {
+  overflow: hidden;
+}
+
+.carousel__elemento {
+  text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #353131;
+  opacity: 0.2;
+  border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+  opacity: 0.5;
+}
+
+.carousel__indicadores .glider-dot.active {
+  opacity: 1;
+}
+
+.carousel__elemento img {
+  width: 300px;
+  height: 250px;
+}
+
+/*finaliza carrusel*/
+/* --- --- CONTENEDOR PRINCIPAL --- --- */
+.contenido-principal {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.contenido-principal__imagen {
+  vertical-align: top;
+  margin-right: 20px;
+  width: 50%;
+  max-width: 550px;
+}
+
+.contenido-principal__contenedor {
+  width: 50%;
+}
+
+.contenido-principal__titulo {
+  font-weight: normal;
+  font-size: 28px;
+}
+
+.contenido-principal__resumen {
+  font-family: "Open Sans", sans-serif;
+  line-height: 30px;
+  color: #131212;
+  margin-top: 5px;
+}
+
+.main {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  margin-left: auto; /* Mueve el contenido hacia la derecha */
+  margin-right: 0; /* Elimina el margen izquierdo */
+}
+
+.main-top {
+  display: flex;
+  width: 100%;
+}
+
+.main-top i {
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+
+.main-skill {
+  display: flex;
+  margin-top: 20px;
+}
+
+.main-skill .card {
+  width: 18rem;
+  margin: 10px;
+  background: white;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.1);
+  /* Elimina la propiedad float: left; */
+}/*# sourceMappingURL=dashboard.component.css.map */

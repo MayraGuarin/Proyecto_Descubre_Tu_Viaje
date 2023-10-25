@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* Estilos para el sidebar */
+.sidebar {
+  background-color: #333;
+  color: #fff;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+}
+
+/* Estilos para el contenido principal */
+.content {
+  margin-left: 250px; /* Ancho del sidebar */
+  padding: 20px;
+}
+
+/* Estilos para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 250px; /* Inicialmente, el sidebar tiene un ancho de 0 para ocultarlo */
+    height: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+  }
+  .content {
+    margin-left: 0;
+  }
+}
+.align-self-center {
+  text-align: center; /* Centra horizontalmente los elementos */
+}
+
+.align-self-center a {
+  display: inline-block; /* Muestra los elementos en línea */
+  margin-right: 5px; /* Ajusta el espaciado horizontal entre los elementos */
+}/*# sourceMappingURL=nav.component.css.map */

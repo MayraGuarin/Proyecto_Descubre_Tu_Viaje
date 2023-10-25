@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* Elimina márgenes y relleno predeterminados */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegúrate de que no haya márgenes en el encabezado */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ajusta el valor según sea necesario */
+}/*# sourceMappingURL=header.component.css.map */

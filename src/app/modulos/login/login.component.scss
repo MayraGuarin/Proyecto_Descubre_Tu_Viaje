@@ -1,50 +1,86 @@
-
-
 #fondo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.contenido {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: white;
 }
 
 .contenido-izquierdo {
-    flex: 1;
-    padding: 20px;
+  text-align: center;
+  flex: 1; /* Ocupa todo el espacio disponible en la columna izquierda */
+  padding: 20px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+.logo-dv {
+  border-radius: 50%;
 }
 
-#form {
-    flex: 1;
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
+.formulario {
+  text-align: center;
+  flex: 1; /* Ocupa todo el espacio disponible en la columna derecha */
+  padding: 20px;
+  margin-left: 20px; /* Espacio entre el div izquierdo y el formulario */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.image-container img {
+  margin-right: 10px;
 }
 
 .form-control {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
+  width: 100%;
+  max-width: 450px;
+  margin-top: 10px;
+  padding: 5px;
 }
 
 .btn {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #0056b3;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 450px;
 }
 
 span {
-    display: block;
-    margin-top: 10px;
+  display: block;
+  margin-top: 10px;
 }
+
+/* Media Query para modo responsivo */
+@media (max-width: 768px) {
+  .contenido {
+    flex-direction: column; /* Coloca los elementos uno debajo del otro */
+    text-align: center; /* Centra el contenido en pantallas pequeñas */
+  }
+
+  .formulario {
+    margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+    margin-top: 20px; /* Espacio entre el div izquierdo y el formulario en pantallas pequeñas */
+  }
+}
+.login-registro{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
